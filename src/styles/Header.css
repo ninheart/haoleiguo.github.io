@@ -1,0 +1,28 @@
+* {
+
+}
+
+.header-container{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid red;
+    justify-content: space-between;
+}
+
+.text-container{
+    position: relative;;
+    width: 30%;
+    border: 1px solid red;
+}
+
+.darkmode-container{
+    width: 5%;
+    position: relative;
+    border: 1px solid red;
+    align-items: center;
+    padding-top: 20px;
+}
