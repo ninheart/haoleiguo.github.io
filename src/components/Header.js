@@ -6,7 +6,7 @@ const Header = () => {
     return (
       <div className='header-container'>
         <div className='text-container'>
-          <h1>{'Hello'}</h1>
+          <h1>{'asdfg'}</h1>
         </div>
         <div className='darkmode-container'>
           <BsFillMoonStarsFill />
