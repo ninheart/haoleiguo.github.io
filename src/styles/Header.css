@@ -4,21 +4,30 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
-    border: 1px solid red;
+    background-color: #FAF9F6;
+    border-bottom: 1px solid black;
     justify-content: space-between;
+    height:80px;
+    position: relative;
 }
 
 .text-container{
     position: relative;;
     width: 25%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+
+.signin-container{
+    /* border: 1px solid red; */
+    margin-top:1%;
+    margin-left:5%;
+    position: relative;
 }
 
 .darkmode-container{
     width: 5%;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-items: center;
     padding-top: 30px;
 }
