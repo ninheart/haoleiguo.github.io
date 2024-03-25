@@ -1,14 +1,26 @@
+:root {
+  --background-color-light: #ffffff; /* Default background color for light mode */
+  --background-color-dark: #333333; /* Background color for dark mode */
+}
+
 
 .header-container{
     display: flex;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #FAF9F6;
     border-bottom: 1px solid black;
     justify-content: space-between;
     height:80px;
     position: relative;
+    background-color: var(--background-color-light);
+    transition: background-color 0.5s ease; 
+}
+
+.dark-mode .header-container{
+    background-color: var(--background-color-dark);
+    border-bottom: 1px solid white;
+    transition: background-color 0.5s ease;
 }
 
 .text-container{
@@ -22,6 +34,7 @@
     margin-top:1%;
     margin-left:5%;
     position: relative;
+    display: flex;
 }
 
 .darkmode-container{

@@ -1,28 +1,42 @@
+:root {
+  --background-color-light: #ffffff; /* Default background color for light mode */
+  --background-color-dark: #2c3237; /* Background color for dark mode */
 
+  --text-color-light: #333333; /* Text color for light */
+
+  --text-color-dark: #ffffff;
+
+}
 
 .content-container {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid blue; */
+    background-color: var(--background-color-light);
+    transition: background-color 0.5s ease; 
         /* position: absolute; */
+}
 
+.dark-mode .content-container {
+    background-color: var(--background-color-dark);
+    transition: background-color 0.5s ease;
 }
 
 .main-content {
-    /* border: 3px solid green; */
     margin-left: 25%;
-    border-radius: 3%;
+    /* border-radius: 3%; */
     width: 50%;
     display: flex;
     position: relative;
-    /* background-color: #FAF9F6 */
-    /* flex-direction: row; */
 }
 
 .header {
     position: relative;
     width: 100%;
-    /* border : 1px solid blue; */
+    color: var(--text-color-light);
+}
+
+.dark-mode .header{
+    color: var(--text-color-dark);
 }
 
 .intro-container{
@@ -33,14 +47,19 @@
     /* display: flex; */
     width: 100%;
     text-align: left;
+    color: var(--text-color-light);
     /* border : 1px solid blue; */
 }
 
+.dark-mode .bio-container{
+    color: var(--text-color-dark);
+}
+
 .image-container{
-    /* position: absolute; */
     left: 50%;
     margin-left: 25%;
-    margin-top: 3%
+    margin-top: 3%;
+    border-radius: 5px;
     /* border: 1px solid blue; */
 }
 
@@ -50,6 +69,10 @@
     padding-left: 35%; 
     padding-right: 35%;   
     display: flex;
+}
+
+.dark-mode .icon{
+    color: white
 }
 
 .icon{
@@ -65,14 +88,25 @@
     width: 50%;
     margin-left: 25%;
     text-align: left;
-
+    display: flex;
+    color: black;
+    /* right: 10px; */
 }
+
+.dark-mode .experience-header{
+    color: white;
+}
+
 .experiences-container{
     margin-top: 20px;
-    /* border: 3px solid green; */
     margin-left: 25%;
     width: 50%;
-    /* display: flex; */
+    color: var(--text-color-light);
+}
+
+.dark-mode .experiences-container{
+    color: var(--text-color-dark);
+
 }
 
 .experience-company {
@@ -80,6 +114,7 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+
 }
 
 .experience-title{
@@ -91,4 +126,52 @@
 
 .highlight{
     color: purple;
+}
+
+.edit-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.modal-container{
+    /* border: 1px solid; */
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    /* top: 40%;
+    left: 50%; */
+    /* transform: translate(-30%, -30%) */
+    /* display: flex; */
+    border-radius: 5px;
+    background-color: rgba(0, 160, 178, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center; 
+    /* align-items: center; */
+}
+
+.form-container{
+    /* display: grid; */
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    /* display: flex; */
+    /* display: flex; */
 }
