@@ -130,19 +130,19 @@ const parsedExperience = JSON.parse(storedExperiences)
 const Content = ({isLoggedIn}) => {
 
   const [isFormOpen, setIsFormOpen] = useState(false)
-  const [experiences, setExperiences] = useState([])
+  const [experiences, setExperiences] = useState(parsedExperience)
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(null)
   const {darkMode} = useTheme();
 
-  useEffect(()=>{
+//   useEffect(()=>{
 	
-		console.log(parsedExperience);
-		if(parsedExperience.length === 0){
-			setExperiences(defaultExperiences);
-		}else{
-			setExperiences(JSON.parse(storedExperiences))
-		}
-  },[])
+// 		console.log(parsedExperience);
+// 		if(parsedExperience == null && parsedExperience?.length == 0){
+// 			setExperiences(defaultExperiences);
+// 		}else{
+// 			setExperiences(JSON.parse(storedExperiences))
+// 		}
+//   },[])
 
   useEffect(()=>{
 	localStorage.setItem('experiences', JSON.stringify(experiences))},[experiences]);
