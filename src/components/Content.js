@@ -227,7 +227,7 @@ const Content = ({isLoggedIn}) => {
         <h2 className='experience-header'>
           {'Experiences'}
           <RiAddBoxFill className='icon' size={30} onClick={() => openForm(null)} />
-          {isFormOpen && isLoggedIn && (
+          {isFormOpen && (
             <ExperienceForm
               onSubmit={(values) => {
                 if (selectedExperienceIndex !== null) {
