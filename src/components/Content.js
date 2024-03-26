@@ -6,7 +6,6 @@ import { FaLinkedin, FaFileAlt } from 'react-icons/fa'
 import { RiAddBoxFill } from 'react-icons/ri'
 import { MdEmail } from 'react-icons/md'
 import { RiDeleteBin5Fill, RiFileEditFill } from 'react-icons/ri'
-
 import ExperienceForm from "./ExperienceForm"
 
 const defaultExperiences = [
@@ -194,19 +193,18 @@ const Content = ({isLoggedIn}) => {
             </p>
             <p className='bio-container'>
               I obtained my bachelor's degree in psychology at University of
-              Ottawa. I'm interested in doing XXX and I'm good at:
+              Ottawa. I enjoy good food and sleeping in my leisure time. I'm
+              interested in doing:
             </p>
             <ul
               style={{ textAlign: 'left', color: darkMode ? 'white' : 'black' }}
             >
-              <li className='highlight'>Making tasty coldbrew</li>
-              <li className='highlight'>Making rich Espresso shots</li>
-              <li className='highlight'>Latte Art specialist</li>
+              <li className='highlight'>Cooking</li>
+              <li className='highlight'>Latte Art enthusiast</li>
+              <li className='highlight'>Ski</li>
               <li className='highlight'>Data Science</li>
             </ul>
-            <p className='bio-container'>
-              I enjoy good food and sleeping in my leisure time
-            </p>
+            <p className='bio-container'>I have academic and industry experiences, reach out to me from my socials on right</p>
           </div>
 
           <div className='image-container'>
@@ -251,7 +249,7 @@ const Content = ({isLoggedIn}) => {
           )}
         </h2>
         {defaultExperiences.map((experience, index) => (
-          <div>
+          <div className='experience-list'>
             <Experience
               key={index}
               {...experience}
