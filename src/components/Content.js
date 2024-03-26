@@ -130,7 +130,7 @@ const parsedExperience = JSON.parse(storedExperiences)
 const Content = ({isLoggedIn}) => {
 
   const [isFormOpen, setIsFormOpen] = useState(false)
-  const [experiences, setExperiences] = useState(parsedExperience)
+  const [experiences, setExperiences] = useState([])
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(null)
   const {darkMode} = useTheme();
 
