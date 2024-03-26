@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { GoogleLogin, GoogleLogout } from "@react-oauth/google"
+import React from 'react';
+import { GoogleLogin } from "@react-oauth/google"
 import { BsFillMoonStarsFill, BsSun } from 'react-icons/bs'
 
 import {useTheme} from './ThemeContext';

@@ -136,14 +136,12 @@ const Content = ({isLoggedIn}) => {
 
   useEffect(()=>{
 	
-	if(storedExperiences){
-		
+		console.log(parsedExperience);
 		if(parsedExperience.length === 0){
 			setExperiences(defaultExperiences);
 		}else{
 			setExperiences(JSON.parse(storedExperiences))
 		}
-	}
   },[])
 
   useEffect(()=>{
