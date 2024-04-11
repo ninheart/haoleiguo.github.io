@@ -110,7 +110,7 @@ function Experience({
             ))}
           </ul>
         </div>
-        {isLoggedIn && (
+        {/* {isLoggedIn && (
           <div className='edit-container'>
             <RiDeleteBin5Fill
               className='icon'
@@ -118,7 +118,7 @@ function Experience({
             />
             <RiFileEditFill className='icon' onClick={handleUpdate} />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   )
@@ -140,15 +140,6 @@ const Content = ({isLoggedIn}) => {
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(null)
   const {darkMode} = useTheme();
 
-//   useEffect(()=>{
-	
-// 		console.log(parsedExperience);
-// 		if(parsedExperience == null && parsedExperience?.length == 0){
-// 			setExperiences(defaultExperiences);
-// 		}else{
-// 			setExperiences(JSON.parse(storedExperiences))
-// 		}
-//   },[])
 
   useEffect(()=>{
 	localStorage.setItem('experiences', JSON.stringify(experiences))},[experiences]);
@@ -222,32 +213,6 @@ const Content = ({isLoggedIn}) => {
             </div>
           </div>
         </div>
-        <h2 className='experience-header'>
-          {'Experiences'}
-          <RiAddBoxFill
-            className='icon'
-            size={30}
-            onClick={() => openForm(null)}
-          />
-          {isFormOpen && (
-            <ExperienceForm
-              onSubmit={(values) => {
-                if (selectedExperienceIndex !== null) {
-                  updateExperience(selectedExperienceIndex, values)
-                } else {
-                  console.log('there')
-                  addExperience(values)
-                }
-              }}
-              onClose={closeForm}
-              initialValues={
-                selectedExperienceIndex !== null
-                  ? experiences[selectedExperienceIndex]
-                  : null
-              }
-            />
-          )}
-        </h2>
         {defaultExperiences.map((experience, index) => (
           <div className='experience-list'>
             <Experience
